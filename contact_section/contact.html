@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contact section</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="contactmedia.css">
-</head>
-<body>
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="contactmedia.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+
     <div class="moving">
-        <marquee behavior="alternate" direction="left">
-           <p class="moving-para">HELLO WELCOME TO MY
-           <span id="span-one">contact Me</span> Section</p>          
-        </marquee>
+      <marquee behavior="alternate" direction="left">
+        <p class="moving-para">
+          HELLO WELCOME TO MY <span id="span-one">contact Me</span> Section
+        </p>
+      </marquee>
     </div>
 
     <div class="wrapper">
-        <div class="main-container">
-            <nav>
-                <div class="nav-item">
-                    <div class="nav-logo">
-                      <p id="logo-text">NS</p>
-                    </div>
-                    <div class="nav-list">
-                        <a href="/index.html">Home</a>
-                        <a href="/about section/about.html">About</a>
-                        <a href="/sevice section/service.html">Services</a>
-                        <a href="/portfolio_section/portfolio.html">Portfolio</a>
-                        <a href="/contact_section/contact.html">Contact</a> 
-                    </div>
-                </div>
-            </nav>
-
-          <div class="info-collection">
-                
-              <h1 class="contact-heading">Contact 
-                <span id="span-two">Me!</span></h1>
-         
-                <form action="">
-
-                  <div class="name-email">
-                    <input type="text" placeholder="Full Name" id="name" required>
-                    <input type="email" placeholder="Email Address" id="address" required>
-                  </div>
-                   
-                  <div class="mobile-subject">
-                    <input type="tel" placeholder="Mobile Number" id="number" required>
-                    <input type="email" placeholder="Email Subject" id="e-subject" required>
-                  </div>
-
-                  <div class="text-area">
-                   <textarea name="" placeholder="Your Message"cols="10" rows="20"></textarea>
-                  </div>
-                    
-                </form>
-
-                <button id="btn">Send Message</button>
+      <div class="main-container">
+        <nav>
+          <div class="nav-item">
+            <div class="nav-logo">
+              <p id="logo-text">NS</p>
+            </div>
+            <div class="nav-list">
+              <a href="/index.html">Home</a>
+              <a href="/about section/about.html">About</a>
+              <a href="/sevice section/service.html">Services</a>
+              <a href="/portfolio_section/portfolio.html">Portfolio</a>
+              <a href="/contact_section/contact.html">Contact</a>
+            </div>
           </div>
+        </nav>
+
+        <div class="info-collection">
+          <h1 class="contact-heading">
+            Contact <span id="span-two">Me!</span>
+          </h1>
+
+          <form action="">
+            <div class="name-email">
+              <input type="text" placeholder="Full Name" id="name" required />
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="address"
+                required
+              />
+            </div>
+
+            <div class="mobile-subject">
+              <input
+                type="tel"
+                placeholder="Mobile Number"
+                id="number"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email Subject"
+                id="e-subject"
+                required
+              />
+            </div>
+
+            <div class="text-area">
+              <textarea
+                name=""
+                placeholder="Your Message"
+                cols="10"
+                rows="20"
+              ></textarea>
+            </div>
+          </form>
+
+          <button id="btn">Send Message</button>
         </div>
-        
+      </div>
     </div>
-</body>
+
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(() => {
+          const preloader = document.getElementById("preloader");
+          preloader.style.opacity = "0";
+          preloader.style.visibility = "hidden";
+          preloader.style.transition = "all 0.5s ease-out";
+        }, 1500); // 2500ms = 2.5 seconds
+      });
+    </script>
+  </body>
 </html>

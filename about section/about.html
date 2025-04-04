@@ -9,6 +9,10 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <div class="loader"></div>
+      </div>
+
     <div class="moving">
         <marquee behavior="alternate" direction="left">
            <p class="moving-para">HELLO WELCOME MY <span id="span-one">ABOUT ME</span>SECTION</p>          
@@ -56,6 +60,19 @@
             </div>
         </main>
 
-</div>
+
+    </div>
+
+    <script>
+        window.addEventListener("load", function () {
+          setTimeout(() => {
+            const preloader = document.getElementById("preloader");
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+            preloader.style.transition = "all 0.5s ease-out";
+          }, 1500); // 2500ms = 2.5 seconds
+        });
+      </script>
+
 </body>
 </html>

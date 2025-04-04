@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="homemedia.css" />
   </head>
   <body>
+
+    <div id="preloader">
+      <div class="loader"></div>
+    </div>
+    
+
+    
+
     <div class="moving">
       <marquee behavior="alternate" direction="left">
         <p class="moving-para">HELLO WELCOME TO MY PORTFOLOIO</p>
@@ -58,9 +66,15 @@
               </div>
               <div class="icon">
                 <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/jobs/view/3821764409"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/dashboard"><i class="fa-brands fa-github"></i>.</a>
-                <a href="nakshatra2364_ns"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/jobs/view/3821764409"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/dashboard"
+                  ><i class="fa-brands fa-github"></i>.</a
+                >
+                <a href="nakshatra2364_ns"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
               </div>
               <button id="btn1">
                 <a href="/home section/images/UI_Frontend_Resume.pdf" download>
@@ -77,5 +91,17 @@
         </main>
       </div>
     </div>
+
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(() => {
+          const preloader = document.getElementById("preloader");
+          preloader.style.opacity = "0";
+          preloader.style.visibility = "hidden";
+          preloader.style.transition = "all 0.5s ease-out";
+        }, 1500); // 2500ms = 2.5 seconds
+      });
+    </script>
+    
   </body>
 </html>

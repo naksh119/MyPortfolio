@@ -89,3 +89,26 @@
     font-size: 4vw;
   }
 }
+
+
+/* chatgpt */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  #right-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #right-desc {
+    width: 100%;
+    text-align: justify;
+  }
+  #btn1 {
+    display: block;
+    margin: auto;
+  }
+}
+
