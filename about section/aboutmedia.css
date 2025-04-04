@@ -70,8 +70,9 @@
     align-items: center;
   }
   #right-title {
-    margin-top: 4vw;
+    margin-top: 50px;
     font-size: 9vw;
+    margin-bottom: 20px;
   }
   #right-desc {
     width: 100%;
