@@ -1,0 +1,35 @@
+@media (max-width: 665px) {
+    body {
+      height: 100vh;
+      padding: 0 3vw;
+    }
+    .nav-item {
+      height: 5vh;
+      padding: 0 2vw;
+      margin-top: 9vw;
+    }
+    .nav-logo{
+      height: 4vh;
+      width: 12vw;
+      border-radius: 50%;
+      justify-content: center;
+    }
+    #logo-text{
+      font-size: 5vw;
+    }
+    .nav-list a {
+      font-size: 3vw;
+    }
+    .nav-list a:hover {
+      color: rgb(10, 255, 173);
+    }
+    .moving-para {
+      font-size: 4vw;
+      color: white;
+      padding: 1vw;
+      letter-spacing: 0;
+    }
+    .wrapper {
+      padding: 0;
+    }
+}

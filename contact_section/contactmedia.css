@@ -1,0 +1,71 @@
+@media (max-width: 665px) {
+    body {
+      padding: 0 3vw;
+    }
+    nav{
+      margin-top: 9vw;
+    }
+    .nav-item {
+      height: 5vh;
+      padding: 0 2vw;
+    }
+    .nav-logo{
+      height: 4vh;
+      width: 12vw;
+      border-radius: 50%;
+      justify-content: center;
+    }
+    #logo-text{
+      font-size: 5vw;
+    }
+    .nav-list a {
+      font-size: 3vw;
+    }
+    .nav-list a:hover {
+      color: rgb(10, 255, 173);
+    }
+    .moving-para {
+      font-size: 4vw;
+      color: white;
+      padding: 1vw;
+      letter-spacing: 0;
+    }
+    .wrapper {
+      padding: 0;
+    }
+    .info-collection{
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      gap: 3vw;
+    }
+    .contact-heading{
+      font-size: 9vw;
+      padding: 1vw;
+    }
+    form{
+      padding: 1vw;
+    }
+    input{
+      width: 100%;
+      padding: 2vw;
+    }
+    .name-email{
+      flex-direction: column;
+    }
+    .mobile-subject{
+      flex-direction: column;
+    }
+    .text-area{
+      margin-top: 5vw;
+    }
+    button{
+      margin: 2vw;
+    }
+    #btn{
+      font-size: 4vw;
+      width: 150px;
+      padding: 2vw;
+    }
+ 
+}

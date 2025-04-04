@@ -1,0 +1,160 @@
+@media (max-width: 665px) {
+  body {
+    height: 100vh;
+    padding: 0 3vw;
+  }
+  .nav-item {
+    height: 5vh;
+    padding: 0 2vw;
+    margin-top: 9vw;
+  }
+  .nav-logo{
+    height: 4vh;
+    width: 12vw;
+    border-radius: 50%;
+    justify-content: center;
+  }
+  #logo-text{
+    font-size: 5vw;
+  }
+  .nav-list a {
+    font-size: 3vw;
+  }
+  .nav-list a:hover {
+    color: rgb(10, 255, 173);
+  }
+  .moving-para {
+    font-size: 4vw;
+    color: white;
+    padding: 1vw;
+    letter-spacing: 0;
+  }
+  .wrapper {
+    padding: 0;
+  }
+}
+
+/* ---------- Tablets (768px and below) ---------- */
+@media (max-width: 768px) {
+
+  .moving-para {
+    font-size: 2.8vw;
+    letter-spacing: 0.2vw;
+  }
+
+  .portfolio-header .section-title {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-header .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-desc,
+  .project-features li {
+    font-size: 0.95rem;
+  }
+
+  .tech-badges span {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ---------- Tablets (768px and below) ---------- */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 80px 15px;
+  }
+
+  .portfolio-header .section-title {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-header .section-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-desc,
+  .project-features li {
+    font-size: 0.95rem;
+  }
+
+  .tech-badges span {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .project-img {
+    height: 180px;
+  }
+}
+
+/* ---------- Mobiles (480px and below) ---------- */
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 60px 10px;
+  }
+
+  .portfolio-header .section-title {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-header .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .project-card {
+    padding: 16px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    place-items: center; /* 👈 This line centers the card */
+  }
+}
