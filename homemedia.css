@@ -40,8 +40,6 @@
     .left-container {
       width: 100%;
       height: 500px;
-      text-align: center;
-      align-items: center;
     }
     #left-title {
       font-size: 4vw;
@@ -62,11 +60,11 @@
       font-size: 4vw;
     }
     #left-desc {
-      font-size: 2.5vw;
+      font-size: 15px;
       width: 300px;
-      padding: 0 3vw;
+      /* padding: 0 3vw; */
       margin-top: 5vw;
-      line-height: 4.5vw;
+      line-height:20px;
     }
     .right-container {
       align-items: center;
