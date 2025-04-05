@@ -51,52 +51,121 @@ body {
 .wrapper {
   padding: 0 3vw;
 }
-nav {
-  border: none;
-  box-shadow: 1px 3px 8px 1px aqua, -3px -3px 10px 1px aqua;
-  border-radius: 15px;
-  margin-top: 1vw;
+/* General Navbar Styles */
+.navbar {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: #02172d;
+  color: aqua;
+  box-shadow: 0 0 10px aqua;
+  position: relative;
+  z-index: 1000;
+  border-radius: 30px;
 }
-.nav-item {
-  height: 50px;
+
+/* Navbar Flexbox */
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vw;
 }
+
+/* Logo */
 .nav-logo {
-  height: 2.2vw;
-  width: 3.5vw;
-  color: aqua;
+  width: 70px;
+  font-size: 20px;
+  font-weight: bold;
   font-style: italic;
-  background-color: #02172d;
   border: 2px solid aqua;
-  border-radius: 50%;
+  padding: 10px;
+  border-radius:100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-#logo-text {
-  font-size: 1.8vw;
-  padding: 0.5vw;
-  border-radius: 40%;
-}
-.nav-list {
+
+/* Desktop Links */
+.desktop-menu {
   display: flex;
   gap: 2.5vw;
 }
-.nav-list a {
+.desktop-menu a {
   color: white;
-  font-size: 1.2vw;
   text-decoration: none;
+  font-size: 1.2vw;
 }
-.nav-list a:hover {
+.desktop-menu a:hover {
   color: black;
   background-color: aqua;
-  border-bottom: 2px solid;
+  padding: 0.3vw 0.6vw;
   border-radius: 1vw;
-  padding: 0.2vw;
-  transform: scale(1.2);
 }
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 6vw;
+  color: aqua;
+  cursor: pointer;
+  z-index: 1001;
+}
+.open-icon {
+  display: block;
+}
+.close-icon {
+  display: none;
+}
+.hamburger.active .open-icon {
+  display: none;
+}
+.hamburger.active .close-icon {
+  display: block;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #02172d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 5vw;
+}
+.mobile-menu a:hover {
+  color: black;
+  background-color: aqua;
+  padding: 1vw 3vw;
+  border-radius: 5vw;
+}
+
+/* Show mobile menu */
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Responsive Handling */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
 .container {
   width: 100%;
   height: auto;
@@ -104,7 +173,7 @@ nav {
   display: flex;
   gap: 0.5vw;
   margin-top: 50px;
-  padding: 40px 10px;
+  padding: 40px 0;
 }
 .left-container {
   width: 60%;
@@ -258,8 +327,9 @@ i:hover {
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .download-btn {
-    font-size: 3.5vw;
-    padding: 2vw 4vw;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 30px;
   }
 }
 

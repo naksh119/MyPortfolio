@@ -9,13 +9,16 @@
       margin-top: 9vw;
     }
     .nav-logo{
-      height: 4vh;
-      width: 12vw;
+      height: 40px;
+      padding: 10px;
+      width: 40px;
       border-radius: 50%;
+      display: flex ;
+      align-items: center;
       justify-content: center;
     }
     #logo-text{
-      font-size: 5vw;
+      font-size: 2px;
     }
     .nav-list a {
       font-size: 3vw;

@@ -3,7 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact section</title>
+
+    <title>Frontend Developer Portfolio | Naksh</title>
+    <meta
+      name="description"
+      content="Naksh is a passionate frontend developer skilled in HTML, CSS, JavaScript, and React. Explore modern, responsive projects and UI designs. Available for freelance or full-time opportunities."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, Web Developer, React Developer, HTML CSS JavaScript Projects, UI Developer, Responsive Web Design, Fresher Developer Portfolio, Developer in India"
+    />
+    <meta name="author" content="Naksh" />
+
+    <!-- Open Graph (for social media sharing) -->
+    <meta property="og:title" content="Naksh | Frontend Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Responsive frontend developer portfolio built using React, HTML, CSS, and JavaScript."
+    />
+    <meta property="og:url" content="https://nakshportfolio.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://nakshportfolio.netlify.app/assets/your-og-image.png"
+    />
+    <!-- Replace with actual image path -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/my-logo.jpg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Stylesheet link -->
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="contactmedia.css" />
   </head>
@@ -22,18 +59,32 @@
 
     <div class="wrapper">
       <div class="main-container">
-        <nav>
-          <div class="nav-item">
-            <div class="nav-logo">
-              <p id="logo-text">NS</p>
-            </div>
-            <div class="nav-list">
+        <nav class="navbar">
+          <div class="nav-container">
+            <div class="nav-logo">NS</div>
+
+            <div class="nav-links desktop-menu">
               <a href="/index.html">Home</a>
               <a href="/about section/about.html">About</a>
               <a href="/sevice section/service.html">Services</a>
               <a href="/portfolio_section/portfolio.html">Portfolio</a>
               <a href="/contact_section/contact.html">Contact</a>
             </div>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+              <i class="fa-solid fa-bars open-icon"></i>
+              <i class="fa-solid fa-xmark close-icon"></i>
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div class="mobile-menu" id="mobile-menu">
+            <a href="/index.html">Home</a>
+            <a href="/about section/about.html">About</a>
+            <a href="/sevice section/service.html">Services</a>
+            <a href="/portfolio_section/portfolio.html">Portfolio</a>
+            <a href="/contact_section/contact.html">Contact</a>
           </div>
         </nav>
 
@@ -91,6 +142,21 @@
           preloader.style.visibility = "hidden";
           preloader.style.transition = "all 0.5s ease-out";
         }, 1500); // 2500ms = 2.5 seconds
+      });
+
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
+        });
       });
     </script>
   </body>
