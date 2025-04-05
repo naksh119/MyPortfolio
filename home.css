@@ -37,8 +37,6 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-
 .moving {
   height: 40px;
   padding: 1.5vw 0;
@@ -101,20 +99,23 @@ nav {
 }
 .container {
   width: 100%;
-  height: 500px;
+  height: auto;
   /* border: 2px solid white;  */
-  padding: 1vw;
   display: flex;
   gap: 0.5vw;
-  margin-top: 4vw;
+  margin-top: 50px;
+  padding: 40px 10px;
 }
 .left-container {
-  width: 50%;
+  width: 60%;
   /* border: 2px solid red; */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  /* padding-left: 60px; */
 }
 .left-content {
   color: white;
@@ -144,13 +145,23 @@ nav {
   }
 }
 #span-one {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
   font-style: italic;
   font-weight: bold;
   font-size: 3vw;
   letter-spacing: 0.2vw;
-  animation: slidefromright 1s ease backwards;
-  opacity: 1;
+  color: aqua;
+  margin-left: 10px;
 }
+
+#span-one.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #left-heading {
   font-size: 1.5vw;
 }
@@ -211,22 +222,45 @@ i:hover {
   color: black;
   box-shadow: 1px 1px 9px 1px aqua, -2px -2px 5px 2px aqua;
 }
-button {
-  width: 15vw;
-  padding: 0.2vw;
-  border-radius: 2vw;
-  font-size: 1.5vw;
-  background-color: aqua;
+
+#btn1 {
+  background: transparent;
   border: none;
+  padding: 0;
+  margin-top: 2vw;
+  display: inline-block;
+}
+
+/* Anchor inside button */
+.download-btn {
+  display: inline-block;
+  padding: 0.8vw 2vw;
+  font-size: 1.5vw;
   font-weight: bold;
   letter-spacing: 0.2vw;
-}
-#btn1 {
-  margin-top: 2vw;
-}
-#btn1:hover {
-  background-color: aqua;
-  transform: scale(1);
   color: black;
-  box-shadow: 2px 2px 5px 2px aqua, -2px -2px 5px 2px aqua;
+  background: aqua;
+  border-radius: 2vw;
+  text-decoration: none;
+  box-shadow: 0 0 10px aqua, 0 0 20px rgba(0, 255, 255, 0.4);
+  transition: all 0.3s ease;
 }
+
+/* Hover effect */
+.download-btn:hover {
+  background: transparent;
+  color: aqua;
+  border: 2px solid aqua;
+  box-shadow: 0 0 12px aqua, 0 0 25px aqua;
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .download-btn {
+    font-size: 3.5vw;
+    padding: 2vw 4vw;
+  }
+}
+
+
